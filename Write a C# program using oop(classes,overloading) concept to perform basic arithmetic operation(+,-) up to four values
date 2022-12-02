@@ -1,0 +1,90 @@
+using System;
+
+namespace Assignment4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            int choice;
+            string op;
+            Console.WriteLine("Enter 1 for 2 numbers");
+            Console.WriteLine("Enter 2 for 3 numbers");
+            Console.WriteLine("Enter 3 for 4 numbers");
+            Console.WriteLine("How many Number ?");
+            choice=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Operator (+,-) ?");
+            op= Console.ReadLine();
+            switch (choice)
+            {
+                case 1:
+                    if (op == "+")
+                    {
+                        Console.WriteLine("Enter numbers");
+                        program.Displaysum((Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())));
+                    }
+                    else if (op == "-")
+                    {
+                        Console.WriteLine("Enter numbers");
+                        program.Displaysub((Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())));
+                    }
+                        break;
+
+               case 2:
+                    if (op == "+")
+                    {
+                        Console.WriteLine("Enter numbers");
+                        program.Displaysum((Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())));
+                    }
+                    else if (op == "-")
+                    {
+                        Console.WriteLine("Enter numbers");
+                        program.Displaysub((Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())));
+
+                    }
+                    break;
+                case 3:
+                    if (op == "+")
+                    {
+                        Console.WriteLine("Enter numbers");
+                        program.Displaysum((Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())));
+                    }
+                    else if (op == "-")
+                    {
+                        Console.WriteLine("Enter numbers");
+                        program.Displaysub((Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())), (Convert.ToInt32(Console.ReadLine())));
+
+                    }
+                    break;
+            }
+            
+        }
+        //Sum
+        void Displaysum(int a,int b)
+        {
+            Console.WriteLine($"Sum of {a} and {b} is: {a + b}");
+        }
+        void Displaysum(int a, int b,int c)
+        {
+            Console.WriteLine($"Sum of {a},{b} and {c} is: {a + b+c}");
+        }
+        void Displaysum(int a, int b,int c,int d)
+        {
+            Console.WriteLine($"Sum of {a},{b},{c} and {d} is: {a + b + c + d}");
+        }
+        //Subtraction
+        void Displaysub(int a, int b)
+        {
+            Console.WriteLine($"Subtraction of {a} and {b} is: {a - b}");
+        }
+        void Displaysub(int a, int b, int c)
+        {
+            Console.WriteLine($"Subtraction of {a},{b} and {c} is: {a - b - c}");
+        }
+        void Displaysub(int a, int b, int c, int d)
+        {
+            Console.WriteLine($"Subtraction of {a},{b},{c} and {d} is: {a - b - c - d}");
+        }
+    }
+}
